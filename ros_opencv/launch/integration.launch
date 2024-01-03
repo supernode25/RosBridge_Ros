@@ -1,0 +1,18 @@
+<launch>
+        <include file="$(find realsense2_camera)/launch/rs_camera.launch" />
+        <node name="tfoi_node" pkg="ros_opencv" type="tfoi_node" output="screen" >
+           
+    <!-- 외부 통신 코드 -->         
+    <!-- <group ns="jeonggi"> -->
+    <!-- <env name="ROS_MASTER_URI" value="http://192.168.0.4:11311" />
+         <env name="ROS_HOSTNAME" value="192.168.0.3" /> 
+         <env name="ROS_NAMESPACE" value="" />   -->
+
+        <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch" ns="bj"/> -->
+
+          <!-- <env name="ROS_MASTER_URI" value="http://192.168.0.4:11311" />
+               <env name="ROS_HOSTNAME" value="192.168.0.3" /> -->
+    <!-- </group> -->
+    </node>
+</launch>
+<!-- node 안에 설정했을 때 외부에서 값이 나오는지 확인 -->
